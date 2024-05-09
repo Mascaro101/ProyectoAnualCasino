@@ -1,0 +1,363 @@
+/*----------------------------------------- contenido ----------------------------------------*/
+/* <div> principal*/
+#contenido {
+    /*border: solid 10px black;
+    border-radius: 10px;*/
+    
+    /*width: 960px;
+    height: 720px;
+    padding-left: 240px;*/
+
+    /*width: 480px;
+    height: 360px;
+    padding-left: 120px;*/
+
+    width: 720px;
+    height: 540px;
+    padding-left: 180px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 40px;
+}
+
+/*----------------------------------------- CONTENIDO TRAGAMONEDAS ---------------------------*/
+#contenidoCajaSupMasPalanca {
+
+    /*Tamaño y borde especificados*/
+    /*border: solid 10px black;*/
+    border-radius: 10px;
+
+    /*width: 960px;
+    height: 480px;*/
+
+    /*width: 480px;
+    height: 240px;*/
+
+    width: 720px;
+    height: 360px;
+
+    /*Centro el elemento según sus dimensiones en el medio*/
+    margin-left: auto;
+    margin-right: auto;
+
+    /*Esto garantiza que el tamaño total del elemento será del ancho y alto designados,
+    incluyendo el relleno y el borde.*/
+    box-sizing: border-box;
+
+    /*Para que lo elementos se puedan acomodar uno al lado del otro con float*/
+    display: flex;
+}
+
+#cajaSuperior {
+    /*Tamaño y borde especificados*/
+    /*border: solid 10px;*/
+
+    /*background-image: url(../imagenes/imgJuegoTragamonedas/cajaSuperior.png);*/
+
+    /*border-radius: 10px;*/
+
+    /*width: 720px;
+    height: 480px;*/
+    /*padding-left: 60px;
+    padding-right: 60px;*/
+
+    /*width: 360px;
+    height: 240px;
+    padding-right: 60px;*/
+
+    width: 540px;
+    height: 360px;
+    padding-right: 60px;
+
+    /*Esto garantiza que el tamaño total del elemento será del ancho y alto designados,
+    incluyendo el relleno y el borde.*/
+    box-sizing: border-box;
+
+    float:left;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    
+}
+
+#cajaSuperiorImg {
+    z-index: 2;
+}
+
+#palancaMaquina {
+    /*Tamaño y borde especificados*/
+    /*border: solid 10px red;*/
+    /*border-radius: 10px;*/
+
+    /*background-image: url(../imagenes/TragamonedasPalanca.png);*/
+
+    
+
+    /*width: 240px;
+    height: 480px;*/
+
+    /*width: 120px;
+    height: 240x;*/
+
+    width: 180px;
+    height: 360px;
+
+    /*Esto garantiza que el tamaño total del elemento será del ancho y alto designados,
+    incluyendo el relleno y el borde.*/
+    box-sizing: border-box;
+
+    float:left;
+}
+
+#palancaMaquina img {
+    /*width: 120px;
+    height: 240x;*/
+
+    width: 180px;
+    height: 360px;
+}
+
+.displayMaquina {
+
+    /*background-image: url(../imagenes/rodillo8.png);*/
+
+    /*width: 150px;
+    height: 330px;*/
+
+    /*width: 75px;
+    height: 165px;*/
+
+    /*width: 112.5px; último utilizado*/
+    /*height: 247.5px; último utilizado*/
+    width: 130px;
+    height: 249px;
+
+    float:left;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    position:absolute;
+}
+
+#displayMaquina01 {
+    /*margin-left: 30px;
+    margin-top: 37.5px;*/
+
+    /*margin-left: 45px; último utilizado*/
+    /*margin-top: 56.25px; último utilizado*/
+    margin-left: 44px;
+    margin-top: 56px;
+    z-index: 1;
+}
+
+#displayMaquina02 {
+    /*margin-left: 142.5px;
+    margin-top: 37.5px;*/
+
+    /*margin-left: 213.75px; último utilizado*/
+    /*margin-top: 56.25px; último utilizado*/
+    margin-left: 213px;
+    margin-top: 56px;
+    z-index: 1;
+}
+
+#displayMaquina03 {
+    /*margin-left: 255px;
+    margin-top: 37.5px;*/
+
+    /*margin-left: 382.5px; último utilizado*/
+    /*margin-top: 56.25px; último utilizado*/
+    margin-left: 382px;
+    margin-top: 56px;
+    z-index: 1;
+}
+
+.displayMaquina img {
+    /*width: 75px;
+    height: 165px;*/
+
+    /*width: 112.5px; ultimo utilizado
+    height: 247.5px; ultimo utilizado*/
+    width: 114px;
+    height: 249px;
+}
+
+/*----------------------------------------- MENU TRAGAMONEDAS --------------------------------*/
+#menuTragamonedas {
+    /*Tamaño y borde especificados*/
+    /*border: solid 10px green;*/
+
+    /*background-image: url(../imagenes/menuTragamonedas.png);*/
+
+    /*border-radius: 10px;*/
+    /*width: 720px;
+    height: 240px;*/
+
+    /*width: 360px;
+    height: 120px;*/
+
+    width: 540px;
+    height: 180px;
+        
+    /*Centro el elemento según sus dimensiones en el medio*/
+    /*margin-right: auto;*/
+
+    /*Esto garantiza que el tamaño total del elemento será del ancho y alto designados,
+    incluyendo el relleno y el borde.*/
+    /*box-sizing: border-box;*/
+    box-sizing: border-box;
+
+    /*Para que lo elementos se puedan acomodar uno al lado del otro con float*/
+    display: flex;
+
+    justify-content: space-between;
+
+    /*padding-left: 75px;*/
+    padding-right: 75px;
+}
+
+#menuTragamonedas img {
+    /*width: 360px;
+    height: 120px;*/
+
+    width: 540px;
+    height: 180px;
+}
+
+.botonMenuTragamonedas {
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    /*height: 90px;
+    width: 120px;*/
+
+    /*height: 45px;
+    width: 60px;*/
+
+    height: 67.5px;
+    width: 90px;
+    
+    border-radius: 5px;
+    position:absolute;
+}
+
+#sumarMenuTragamonedas {
+    background-color: #158968;
+    font-size: 1.2em;
+    color:black;
+    /*margin-top: 37.5px;
+    margin-left: 37.5px;*/
+
+    margin-top: 56.25px;
+    margin-left: 56.25px;
+}
+
+#sumarMenuTragamonedas:hover {
+    background-color: #46c657;
+}
+
+#restarMenuTragamonedas {
+    background-color: #ffa468;
+    font-size: 1.2em;
+    color:black;
+   /* margin-top: 37.5px;
+    margin-left: 105px;*/
+
+    margin-top: 56.25px;
+    margin-left: 157.5px;
+}
+
+#restarMenuTragamonedas:hover {
+    background-color: #ec614a;
+}
+
+/*div*/
+.visorTragamonedas {
+
+    /*height: 90px;*/
+
+    /*height: 45px;*/
+
+    height: 67.5px;
+
+    display:flex;
+
+    position:absolute;
+}
+
+.visorTragamonedas p {
+    color:#46c657;
+    font-size: 0.7em;
+    position:absolute;
+
+    /*padding-top: 39px;*/
+
+    padding-top: 60px;
+}
+
+#apuestaTragamonedas {
+    /*margin-left: 175px;*/
+    
+    margin-left: 265px;
+}
+
+#premioTragamonedas {
+    /*margin-left: 258px;*/
+
+    margin-left: 387px;
+}
+
+#valorApuestaMenuTragamonedas {
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    color:#46c657;
+    font-size: 0.9em;
+
+    /*margin-top: 36.5px;
+    margin-left: 172.5px;*/
+
+    margin-top: 56.25px;
+    margin-left: 258.75px;
+
+    position:absolute;
+
+    box-sizing: border-box;
+}
+
+#resultadosMenuTragamonedas {
+    border-radius: 5px;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    
+
+    /*height: 90px;
+    width: 165px;*/
+
+    /*height: 45px;
+    width: 82.5px;*/
+
+    height: 67.5px;
+    width: 123.75px;
+
+    background-color: black;
+
+    text-align: center;
+    color:#46c657;
+    font-size: 0.9em;
+
+    /*margin-top: 36.5px;
+    margin-left: 240px;*/
+
+    margin-top: 56.25px;
+    margin-left: 360px;
+
+    position:absolute;
+
+    box-sizing: border-box;
+}

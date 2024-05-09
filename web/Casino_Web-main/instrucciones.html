@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Casino Web</title>
+
+    <!-- inserción de icono miniatura de la página web -->
+    <link rel="icon" type="image/x-icon" href="imagenes/imgGeneral/iconMiniatura.svg">
+
+    <!-- Ruta a archivos css (principal style.css) -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reglas.css">
+
+    <!-- Ruta a archivo js -->
+    <script src="funciones.js"></script>
+
+    <!-- Fuente 1 de google fonts (Press Start 2P) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+</head>
+
+<body onload="actualizarDatosCuenta()">
+    <!-- ________________________________________ CONTENEDOR GENERAL _______________________________ -->
+    <div id="contenedorGeneral">
+
+        <!-- ____________________________________ BANNER ___________________________________________ -->
+        <div id="banner"></div>
+
+        <!-- ____________________________________ CABEZAL __________________________________________ -->
+        <div id="menuCabezal">
+            <ul>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="cargar.html">Cargar/Retirar</a></li>
+                <li><a href="instrucciones.html" id="current">Instrucciones</a></li>
+                <li><a href="opciones.html">Opciones</a></li>
+            </ul>
+        </div>
+
+        <!-- ____________________________________ DATOS CUENTA _____________________________________ -->
+        <div id="datosCuenta">
+            <table>
+
+                <tr>
+                    <td colspan="2">
+                        <p id="datosCuentaUsuario">Usuario</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" id="usuarioVista" class="datosCuentaVista" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p id="datosCuentaSaldo">Saldo</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="simboloPesos">$</p>
+                    </td>
+                    <td>
+                        <input type="text" id="saldoVista" class="datosCuentaVista" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" id="botonCerrarSesion" value="Cerrar Sesi&oacute;n" onclick="cerrarSesion();">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ____________________________________ LOGO _____________________________________________ -->
+        <div id="logo">
+            <a href="juegos.html">
+                <img src="imagenes/imgGeneral/logo.gif" alt="Logo casino">
+            </a>
+        </div>
+
+        <!-- ____________________________________ CONTENIDO ________________________________________ -->
+        <div id="contenido">
+
+            <!-- _______________________________| INICIO Reglas.HTML |______________________________ -->
+            <div id="contenidoReglas">
+
+                <div class="contenedorReglas">
+                    <dl>
+                        <dt class="tituloReglas">Tragamonedas</dt>
+                        <dd>
+                            <ul id="listaReglasTragamonedas">
+                                <li>
+                                    <p>Selección de la apuesta: Antes de empezar a jugar, debes seleccionar
+                                        el valor de tu apuesta. Las tragamonedas suelen tener opciones de
+                                        apuesta mínima y máxima.</p>
+                                </li>
+                                <li>
+                                    <p>Configuración de las líneas de pago: Las tragamonedas generalmente
+                                        tienen múltiples líneas de pago, que son las combinaciones de símbolos
+                                        en las que se pueden formar ganancias. Puedes elegir cuántas líneas de
+                                        pago activar y cuántas monedas apostar por línea.</p>
+                                </li>
+                                <li>
+                                    <p>Giro de los carretes: Una vez que hayas seleccionado tu apuesta,
+                                        puedes hacer girar los carretes presionando el botón correspondiente.
+                                        Los carretes se mueven y luego se detienen en una combinación aleatoria
+                                        de símbolos.</p>
+                                </li>
+                                <li>
+                                    <p>Evaluación de las combinaciones: Después de que los carretes se detengan,
+                                        se evalúa la combinación resultante de símbolos en las
+                                        líneas de pago activas. Cada combinación tiene un valor de pago
+                                        asociado, que determina las ganancias.</p>
+                                </li>
+                                <li>
+                                    <p>Ganancias y bonificaciones: Si los símbolos en los carretes forman una combinación
+                                        ganadora según las reglas del juego, recibirás un premio en función del valor de pago
+                                        de esa combinación. Algunas tragamonedas también ofrecen bonificaciones, como giros
+                                        gratis o rondas de bonificación, que se activan al obtener ciertos
+                                        símbolos especiales.</p>
+                                </li>
+                                <li>
+                                    <p>Continuación del juego: Después de recibir tus ganancias, puedes elegir
+                                        continuar jugando o retirarte con tus premios. Puedes seguir girando
+                                        los carretes con la misma apuesta o ajustarla según tus
+                                        preferencias.</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="contenedorReglas">
+                    <dl>
+                        <dt class="tituloReglas">Ruleta</dt>
+                        <dd>
+                            <ul id="listaReglasRuleta">
+                                <li>
+                                    <p>Objetivo: El objetivo del juego es predecir en qué número o grupo de números
+                                        caerá la bola en la rueda de la ruleta.</p>
+                                </li>
+                                <li>
+                                    <p>Mesa de apuestas: La mesa de la ruleta tiene una rueda numerada y una mesa donde los
+                                        jugadores pueden realizar sus apuestas. Las apuestas se dividen en apuestas internas
+                                        (números individuales o combinaciones específicas) y apuestas externas
+                                        (secciones más amplias, como rojo/negro o par/impar).</p>
+                                </li>
+                                <li>
+                                    <p>Colocación de las apuestas: Los jugadores colocan sus fichas en la mesa de apuestas
+                                        para indicar qué apuestas están haciendo. Puedes realizar múltiples apuestas en una sola
+                                        ronda.</p>
+                                </li>
+                                <li>
+                                    <p>Giro de la rueda: Después de que los jugadores hayan realizado sus apuestas, el crupier
+                                        gira la rueda de la ruleta en una dirección y lanza una bola en la dirección opuesta.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Resultado y pagos: Cuando la bola se detiene en una casilla numerada de la rueda,
+                                        el crupier anuncia el número ganador. Luego, el crupier paga las apuestas ganadoras y
+                                        retira las fichas de las apuestas perdedoras de la mesa.</p>
+                                </li>
+                                <li>
+                                    <p>Tipos de apuestas y pagos: Hay diferentes tipos de apuestas con pagos correspondientes.
+                                        Las apuestas internas, que son más específicas, tienen pagos más altos pero
+                                        probabilidades más
+                                        bajas, mientras que las apuestas externas tienen pagos más bajos pero probabilidades más
+                                        altas.</p>
+                                </li>
+                                <li>
+                                    <p>Reglas adicionales: Dependiendo de la variante de la ruleta y las reglas de la casa,
+                                        puede haber reglas especiales como "La Partage" (se recupera la mitad de la apuesta en
+                                        caso de apuesta externa si la bola cae en cero) o "En Prison" (la apuesta se mantiene en
+                                        prisión si la bola cae en cero, y se recupera si la siguiente apuesta es ganadora).</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+        
+                <div class="contenedorReglas">
+                    <dl>
+                        <dt class="tituloReglas">Black Jack</dt>
+                        <dd>
+                            <ul id="listaReglasBlackJack">
+                                <li>
+                                    <p>Objetivo: El objetivo del blackjack es obtener una mano con un valor total
+                                        lo más cercano posible a 21 sin pasarse, mientras vences a
+                                        la mano del crupier.</p>
+                                </li>
+                                <li>
+                                    <p>Valores de las cartas: Las cartas numéricas del 2 al 10 tienen el mismo
+                                        valor que su número, las cartas con figuras (J, Q, K) valen 10 puntos
+                                        cada una, y el As puede valer 1 u 11 puntos, según convenga al jugador.</p>
+                                </li>
+                                <li>
+                                    <p>Desarrollo del juego: El crupier reparte dos cartas boca arriba a cada
+                                        jugador y una o dos cartas para sí mismo, una boca arriba y
+                                        otra boca abajo.</p>
+                                </li>
+                                <li>
+                                    <p>Opciones del jugador: El jugador tiene varias opciones para jugar su mano:</p>
+                                    <ul>
+                                        <li>"Pedir" o "Tomar carta": El jugador puede solicitar una carta
+                                            adicional para aumentar el valor de su mano.</li>
+                                        <li>"Plantarse" o "Quedarse": El jugador puede decidir no
+                                            recibir más cartas y quedarse con el valor de su mano actual.</li>
+                                        <li>"Doblar": Algunos casinos permiten al jugador duplicar su apuesta
+                                            inicial y recibir solo una carta adicional.</li>
+                                        <li>"Dividir": Si las dos primeras cartas del jugador tienen el mismo valor,
+                                            se pueden separar en dos manos distintas y se realiza una apuesta adicional.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Mano del crupier: Después de que todos los jugadores hayan tomado sus decisiones,
+                                        el crupier revela su segunda carta. El crupier debe seguir reglas específicas:
+                                        si su mano tiene un valor de 16 o menos, debe pedir otra carta; si tiene 17 o
+                                        más, debe plantarse.</p>
+                                </li>
+                                <li>
+                                    <p>Ganadores y perdedores: Si la mano del jugador supera los 21 puntos, pierde
+                                        automáticamente. Si el jugador se planta, el crupier revela su mano y
+                                        compara su valor con el de cada jugador. El jugador gana si tiene un
+                                        valor de mano mayor que el crupier sin pasarse de 21, o si el crupier
+                                        se pasa de 21.</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+
+            </div>
+            <!-- _______________________________| FIN Reglas.HTML |_________________________________ -->
+
+        </div>
+
+    </div>
+    <!-- ________________________________________ FIN CONTENEDOR GENERAL ___________________________ -->
+
+    <!-- ________________________________________ PIE DE PÁGINA ____________________________________ -->
+    <footer id="pieDePagina">
+        <p>&copy; 2023 Nicol&aacute;s Borghese</p>
+        
+    </footer>
+    <!-- ________________________________________ FIN PÁGINA _______________________________________ -->
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+/*----------------------------------------- GLOBAL -------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    /*Se agrega el color para modificar texto que no está asignado a ningún bloque*/
+    color: #fafdff;
+
+}
+
+body {
+    /*Esto garantiza que el tamaño total del elemento será del ancho y alto designados,
+    incluyendo el relleno y el borde.*/
+    box-sizing: border-box;
+
+    background-color: #38002c;
+
+    /*Por alguna razón si no está el display: block se oculta el scroll lateral*/
+    display:block;
+}
+
+/*Para que el pie de página quede al fondo*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/*Para que el pie de página quede al fondo*/
+#contenedorGeneral {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    display:block;
+}
+
+/*----------------------------------------- BANNER -------------------------------------------*/
+/* <div> principal*/
+#banner {
+    
+    height:160px;
+
+    background-image: url(../imagenes/imgGeneral/banner.gif);
+    background-size:auto;
+}
+
+/*----------------------------------------- CABEZAL ------------------------------------------*/
+/* <div> principal*/
+#menuCabezal {
+    background-color: black;
+    padding: 15px;
+}
+
+#menuCabezal ul{
+    /*display flex para permitir modificar la disposición de los elementos li */
+    display: flex;
+    /*justify-content:space-between para modificar la forma de la disposición de los elementos li */
+    justify-content:space-between;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#menuCabezal ul li{
+    /*Es correcto poner el display inline en los li para que se acomoden uno al lado del otro*/
+    display: inline;
+}
+
+#menuCabezal ul li a{
+    color: #3953c0;
+    /*Quita la decoración que aplican los li incluso*/
+    text-decoration: none;
+    font-size: 1em;
+}
+
+#menuCabezal ul li a:hover{
+    color: #5e96dd;
+}
+
+#menuCabezal #current{
+    text-decoration:underline;
+    color: #5e96dd;
+}
+
+/*----------------------------------------- DATOS CUENTA -------------------------------------*/
+/* <div> principal*/
+#datosCuenta {
+    width: 200px;
+    height: auto;
+    background-color: #2c5b6d;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    /*margin-top: 1%;*/
+    border: 10px solid black;
+    border-bottom-left-radius: 10px;
+    /*margin-bottom: 20px;*/
+
+    position: sticky;
+    top: 0;
+
+    float:right;
+}
+
+#datosCuenta td{
+    color:#000000;
+}
+
+#datosCuenta #datosCuentaUsuario, #datosCuentaSaldo{
+    font-size: 0.6em;
+    /*margin-right: 20px;*/
+    color: #ffda70;
+    text-align: center;
+}
+
+#usuarioVista{
+    /*width: 100% habilita a cambiar el tamaño del div sin romperse*/
+    width: 100%;
+    height: 2em;
+    /*margin-bottom: 10px;*/
+    margin-bottom: 10px;
+    border: 5px solid #000000;
+    background-color: #fafdff;
+    color: #000000;
+    font-size: 0.7em;
+
+    /*Atributos que se modifican igual en los inputs text se los formularios y demas...*/
+    border-radius: 6px;
+    border: 4px solid;
+
+    text-align: center;
+
+    position:relative;
+
+    /*<!DOCTYPE html> al utilizar esta etiqueta es necesario indicar que los bordes no excedan las cajas */
+    box-sizing: border-box;
+}
+
+#simboloPesos {
+
+    color: #46c657;
+    display: inline;
+    font-size: 1.1em;
+}
+
+#saldoVista {
+    width: 100%;
+    height: 2em;
+    /*margin-bottom: 10px;*/
+    border: 5px solid #000000;
+    background-color: #fafdff;
+    color: #000000;
+    font-size: 0.7em;
+
+    /*Atributos que se modifican igual en los inputs text se los formularios y demas...*/
+    border-radius: 6px;
+    border: 4px solid;
+    padding-left: 5px;
+
+    display: inline;
+
+    /*<!DOCTYPE html> al utilizar esta etiqueta es necesario indicar que los bordes no excedan las cajas */
+    box-sizing: border-box;
+}
+
+#datosCuenta #botonCerrarSesion {
+    width: 100%;
+    height: 2em;
+    margin-top:10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color:  #222a5c;
+    font-size: 0.8em;
+    color: #fafdff;
+}
+
+#datosCuenta #botonCerrarSesion:hover{
+    background-color: #8babbf;
+    color: #000000
+}
+
+/*----------------------------------------- LOGO ---------------------------------------------*/
+/* <div> principal*/
+#logo {
+    /* especificar las dimensiones del div (height y width) en relación a la imágen de background
+    es aparentemente la forma más precisa de conseguir que el border la rodee */
+    /*height: 80px;
+    width: 300px;*/
+    height:120px;
+    width: 450px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /* margin: auto; centra horizontalmente el contenido del div en el medio */
+    margin-left: auto;
+    margin-right: auto;
+    /*background-image: url(../imagenes/logo.gif);*/
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    /*border: 5px solid #ff8426;*/
+}
+
+#logo img{
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*----------------------------------------- CONTENIDO ----------------------------------------*/
+/* <div> principal y compartido*/
+#contenido {
+    clear: both;
+    /*margin-bottom: 40px;*/
+}
+
+/*----------------------------------------- PIE DE PÁGINA ------------------------------------*/
+/* <div> principal*/
+#pieDePagina {
+    background-color: #000000;
+    font-size: 0.6em;
+    height: 150px;
+    /*margin-top: 1.5em;*/
+    padding-top: 1%;
+    padding-bottom: 10px;
+    
+    /*Para que el pie de página quede al fondo*/
+    margin-top: auto;
+}
+
+#pieDePagina p {
+    color: #fafdff;
+    text-align: center;
+    margin-bottom: 120px;
+    font-size: 1.5em;
+}
+
+#pieDePagina ul {
+    /*display flex para permitir modificar la disposición de los elementos li */
+    display: flex;
+    /*justify-content:space-between para modificar la forma de la disposición de los elementos li */
+    justify-content: center;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#pieDePagina ul li{
+    /*Es correcto poner el display inline en los li para que se acomoden uno al lado del otro*/
+    display: inline;
+}
+
+#pieDePagina ul li a{
+    color: #45b8b3;
+    /*Quita la decoración que aplican los li incluso*/
+    text-decoration: none;
+    font-size: 1em;
+}
+
+#pieDePagina ul li a:hover{
+    color: #8cffde;
+}

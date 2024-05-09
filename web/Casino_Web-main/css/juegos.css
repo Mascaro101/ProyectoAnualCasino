@@ -1,0 +1,38 @@
+/*----------------------------------------- contenedorJuegos ---------------------------------*/
+/* <div> principal y compartido*/
+#contenido {
+    justify-content:space-around;
+
+    /*Para que lo elementos se puedan acomodar uno al lado del otro con float*/
+    display: flex;
+    
+    margin-left: 20%;
+    margin-right: 20%;
+
+    margin-bottom: 40px;
+}
+
+#contenido .divsJuegos {
+
+    width:200px;
+    height: auto;
+    border-radius: 10px;
+    float:left;
+}
+
+/*#contenido .divsJuegos a {
+    width:80%;
+    border:5px solid black;
+}*/
+
+.divsJuegos img {
+    width:100%;
+    height:auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border:10px solid black;
+}
+
+.divsJuegos img:hover{
+    border:10px solid white;
+}

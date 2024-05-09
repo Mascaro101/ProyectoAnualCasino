@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Casino Web</title>
+
+    <!-- inserción de icono miniatura de la página web -->
+    <link rel="icon" type="image/x-icon" href="imagenes/imgGeneral/iconMiniatura.svg">
+
+    <!-- Ruta a archivos css (principal style.css) -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/formularios.css">
+    <link rel="stylesheet" type="text/css" href="css/crearCuenta.css">
+
+    <!-- Ruta a archivo js -->
+    <script src="funciones.js"></script>
+
+    <!-- Fuente 1 de google fonts (Press Start 2P) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <!-- ________________________________________ CONTENEDOR GENERAL _______________________________ -->
+    <div id="contenedorGeneral">
+
+        <!-- ____________________________________ BANNER ___________________________________________ -->
+        <div id="banner"></div>
+
+        <!-- ____________________________________ CABEZAL __________________________________________ -->
+        <div id="menuCabezal"></div>
+
+        <!-- ____________________________________ LOGO _____________________________________________ -->
+        <div id="logo">
+            <a href="index.html">
+                <img src="imagenes/imgGeneral/logo.gif" alt="Logo casino">
+            </a>
+        </div>
+
+        <!-- ____________________________________ CONTENIDO ________________________________________ -->
+        <div id="contenido">
+
+            <!-- _______________________________| INICIO CrearCuenta.HTML |_________________________ -->
+            <div id="contenidoCrearCuenta">
+
+                <p class="encabezadoFormulario">Complete el siguiente formulario para crear su cuenta</p>
+                
+                <form id="formularioCrearCuenta">
+                    <table>
+                        <tr>
+                            <td>
+                                <p>Nombre de Usuario </p>
+                            </td>
+                            <td colspan="3">
+                                <input type="text" id="crearUsuario" class="llenarTexto" maxlength="16">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Contraseña </p>
+                            </td><td colspan="3">
+                                <input type="password" id="crearContrasenia1" class="llenarTexto">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Verificar Contraseña </p>
+                            </td>
+                            <td colspan="3">
+                                <input type="password" id="crearContrasenia2" class="llenarTexto">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Direcci&oacute;n de email </p>
+                            </td>
+                            <td colspan="3">
+                                <input type="text" id="crearMail" class="llenarTexto">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Fecha De Nacimiento </p>
+                            </td>
+                            <td>
+                                <input type="text" id="crearDia" class="llenarFecha" placeholder="dd">
+                            </td>
+                            <td>
+                                <input type="text" id="crearMes" class="llenarFecha" placeholder="mm">
+                            </td>
+                            <td>
+                                <input type="text" id="crearAnio" class="llenarFecha" placeholder="aaaa">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Tel&eacute;fono </p>
+                            </td>
+                            <td colspan="3">
+                                <input type="text" id="crearTelefono" class="llenarTexto">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <p>Deseo suscribirme a las novedades </p>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="crearSuscripcion" class="completarCheck">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <p>Acepto los t&eacute;rminos y condiciones </p>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="crearTerminos" class="completarCheck">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <ul id="pantallaErrorCrearCuenta" class="pantallaError">
+                                    <!--
+                                        Espacio dedicado a los <li> que van a indicar
+                                        los resultados de las validaciones
+                                    -->
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <input type="button" id="botonCrearCuenta" class="botonGrandeEnviar" value="CREAR CUENTA" onclick="crearCuenta()">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="linkFormulario">
+                                    <a href="index.html">
+                                        Haga click aqu&iacute; para volver al inicio
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- _______________________________| FIN CrearCuenta.HTML |____________________________ -->
+
+        </div>
+
+    </div>
+    <!-- ________________________________________ FIN CONTENEDOR GENERAL ___________________________ -->
+
+    <!-- ________________________________________ PIE DE PÁGINA ____________________________________ -->
+    <footer id="pieDePagina">
+        <p>&copy; 2023 Nicol&aacute;s Borghese</p>
+        
+    </footer>
+    <!-- ________________________________________ FIN PÁGINA _______________________________________ -->
+</body>
+
+</html>

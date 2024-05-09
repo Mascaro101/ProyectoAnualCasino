@@ -1,0 +1,120 @@
+/* index.html, crearCuenta.html, perfil.html, cargar.html, opciones.html*/
+
+/*-------------------------------------------- titulo principal ------------------------------------*/
+.encabezadoFormulario {
+    color: #ffda70;
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/*-------------------------------------------- Inputs de llenado de texto --------------------------*/
+.llenarTexto, .llenarFecha {
+    width: 100%;
+    height: 2em;
+    color:#000000;
+    font-size:1em;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+    border: 7px solid;
+    padding-left: 10px;
+
+    /*<!DOCTYPE html> al utilizar esta etiqueta es necesario indicar que los bordes no excedan las cajas */
+    box-sizing: border-box;
+}
+
+/*Modificar el margin de un elemento en un table, afecta a los otros del mismo td */
+form p {
+    font-size: 0.8em;
+}
+
+option {
+    color:black;
+}
+
+.completarCheck {
+    /*Clave usar la unidad "em" para modificar el tamaño de los checkbox*/
+    width: 1.7em;
+    height: 1.7em;
+    /*border: 1px solid; No anda*/
+    /*border-radius: 10px; No anda*/
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*-------------------------------------------- Botones grandes de envío ----------------------------*/
+.botonGrandeEnviar {
+    width: 100%;
+    height: 2.3em;
+    /* color:#16171a; */
+    margin-top:10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #222a5c;
+    font-size: 1.2em;
+}
+
+.botonGrandeEnviar:hover {
+    background-color: #8babbf;
+    color: #000000
+}
+
+/*-------------------------------------------- pantallaError ---------------------------------------*/
+.pantallaError {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pantallaError li {
+    color:#ffa468;
+    margin-bottom: 15px;
+    list-style: none;
+    font-size: 0.7em;
+}
+
+.pantallaError .pantallaExito {
+    color:#46c657;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    list-style: none;
+
+}
+
+/*-------------------------------------------- input text error/exito ------------------------------*/
+.displayBackgroundError {
+    background-color: #c27676;
+}
+
+.displayBackgroundExito {
+    background-color: #a0cf8a;
+}
+
+/*-------------------------------------------- links comunes en forms ------------------------------*/
+.linkFormulario {
+    text-align: center;
+}
+
+form a {
+    font-size: 0.7em;
+    color:#45b8b3;
+}
+
+form a:hover {
+    color:#8cffde;
+}
+
+/*-------------------------------------------- tablas en forms -------------------------------------*/
+form table {
+    /* clave */
+    width: 100%;
+}
+
+/*-------------------------------------------- notas -----------------------------------------------*/
+.nota{
+    color:#ccac68;
+    font-size: 0.8em;
+}

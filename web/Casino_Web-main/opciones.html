@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Casino Web</title>
+
+    <!-- inserción de icono miniatura de la página web -->
+    <link rel="icon" type="image/x-icon" href="imagenes/imgGeneral/iconMiniatura.svg">
+
+    <!-- Ruta a archivos css (principal style.css) -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/formularios.css">
+    <link rel="stylesheet" type="text/css" href="css/divsRegulares.css">
+
+    <!-- Ruta a archivo js -->
+    <script src="funciones.js"></script>
+
+    <!-- Fuente 1 de google fonts (Press Start 2P) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+</head>
+
+<body onload="actualizarDatosCuenta()">
+    <!-- ________________________________________ CONTENEDOR GENERAL _______________________________ -->
+    <div id="contenedorGeneral">
+
+        <!-- ____________________________________ BANNER ___________________________________________ -->
+        <div id="banner"></div>
+
+        <!-- ____________________________________ CABEZAL __________________________________________ -->
+        <div id="menuCabezal">
+            <ul>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="cargar.html">Cargar/Retirar</a></li>
+                <li><a href="instrucciones.html">Instrucciones</a></li>
+                <li><a href="opciones.html" id="current">Opciones</a></li>
+            </ul>
+        </div>
+
+        <!-- ____________________________________ DATOS CUENTA _____________________________________ -->
+        <div id="datosCuenta">
+            <table>
+
+                <tr>
+                    <td colspan="2">
+                        <p id="datosCuentaUsuario">Usuario</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" id="usuarioVista" class="datosCuentaVista" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p id="datosCuentaSaldo">Saldo</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="simboloPesos">$</p>
+                    </td>
+                    <td>
+                        <input type="text" id="saldoVista" class="datosCuentaVista" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" id="botonCerrarSesion" value="Cerrar Sesi&oacute;n" onclick="cerrarSesion();">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ____________________________________ LOGO _____________________________________________ -->
+        <div id="logo">
+            <a href="juegos.html">
+                <img src="imagenes/imgGeneral/logo.gif" alt="Logo casino">
+            </a>
+        </div>
+
+        <!-- ____________________________________ CONTENIDO ________________________________________ -->
+        <div id="contenido">
+
+            <!-- _______________________________| INICIO Opciones.HTML |____________________________ -->
+            <div id="contenedorOpciones" class="contenedorRegular">
+
+                <p class="encabezadoFormulario">Opciones</p>
+        
+                <form id="formularioOpciones">
+                    <table>
+                        <!--<tr>
+                            <td>
+                                <p>Cambiar color de fondo</p>
+                            </td>
+                            <td>
+                                <select name="colorFondo" id="cambiarColorFondo" class="llenarTexto">
+                                    <option selected>Default</option>
+                                    <option>Azul</option>
+                                    <option>Verde</option>
+                                    <option>Rojo</option>
+                                </select>
+                            </td>
+                        </tr>-->
+                        <tr>
+                            <td>
+                                <p>Elegir una im&aacute;gen para el fondo</p>
+                            </td>
+                            <td>
+                                <select name="colorLetra" id="cambiarColorLetra" class="llenarTexto">
+                                    <option selected>Default</option>
+                                    <option>Im&aacute;gen 01</option>
+                                    <option>Im&aacute;gen 02</option>
+                                    <option>Im&aacute;gen 03</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!--<tr>
+                            <td>
+                                <p>Cambiar color de letra</p>
+                            </td>
+                            <td>
+                                <select name="colorLetra" id="cambiarColorLetra" class="llenarTexto">
+                                    <option selected>Default</option>
+                                    <option>Azul</option>
+                                    <option>Verde</option>
+                                    <option>Rojo</option>
+                                </select>
+                            </td>
+                        </tr>-->
+                        <tr>
+                            <td colspan="2">
+                                <ul  id="pantallaErrorOpciones" class="pantallaError">
+        
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="button" id="realizarCambioOpciones" class="botonGrandeEnviar" value="REALIZAR CAMBIOS"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- _______________________________| FIN Opciones.HTML |_______________________________ -->
+
+        </div>
+
+    </div>
+    <!-- ________________________________________ FIN CONTENEDOR GENERAL ___________________________ -->
+
+    <!-- ________________________________________ PIE DE PÁGINA ____________________________________ -->
+    <footer id="pieDePagina">
+        <p>&copy; 2023 Nicol&aacute;s Borghese</p>
+        
+    </footer>
+    <!-- ________________________________________ FIN PÁGINA _______________________________________ -->
+</body>
+
+</html>

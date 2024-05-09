@@ -1,0 +1,17 @@
+#contenido {
+
+    margin: auto;
+    height: 240px;
+    width: 640px;
+    border: 10px solid black;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 40px;
+    background-color: #2c5b6d;
+    clear:both;
+}
+
+#contenido h1{
+    margin: auto;
+    color: #ffda70;
+}
