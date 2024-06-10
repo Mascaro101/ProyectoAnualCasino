@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url('background_001 (1).jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor__todo {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Bloque rojo */
+.caja__trasera {
+    flex: 1;
+    padding: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.caja__trasera h3 {
+    font-weight: 400;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.caja__trasera p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Bloque blanco (Formulario) */
+.contenedor__login-register {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor__login-register form {
+    width: 100%;
+}
+
+.contenedor__login-register form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fd4646;
+}
+
+.contenedor__login-register form input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.contenedor__login-register form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    font-size: 14px;
+    background: #fd4646;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 850px) {
+    main {
+        margin-top: 50px;
+    }
+
+    .contenedor__todo {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .caja__trasera,
+    .contenedor__login-register {
+        max-width: 90%;
+    }
+}

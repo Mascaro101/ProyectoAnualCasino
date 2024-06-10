@@ -3,23 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    <title>Login y Register</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <main>
         <div class="contenedor__todo">
-            <div class="contenedor__login">
-                
-                <form action="" class="formulario__login">
+            <!-- Bloque rojo -->
+            <div class="caja__trasera">
+                <h3>Fortune Royale</h3>
+                <p>Juega con tus amigos de manera segura sin perder dinero!</p>
+            </div>
+
+            <!-- Bloque blanco (Formulario de Login) -->
+            <div class="contenedor__login-register">
+                <form action="/main" onsubmit="setUsername(event)">
                     <h2>Iniciar Sesión</h2>
-                    <input type="text" placeholder="Nombre de Usuario">
+                    <input type="text" placeholder="username" id="usernameInput">
                     <button>Entrar</button>
                 </form>
             </div>
         </div>
     </main>
+
+    <script>
+    function setUsername(event) {
+        event.preventDefault();
+        let username = document.getElementById('usernameInput').value;
+        sessionStorage.setItem("username", username);
+        fetch('/set_username', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username: username }),
+        })
+        .then(() => {
+            event.target.submit();
+        });
+    }
+    </script>
+    <script src="/static/js/login.js"></script>
 </body>
 </html>
