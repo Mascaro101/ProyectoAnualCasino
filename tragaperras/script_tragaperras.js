@@ -1,38 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
     //Espera a que el DOM esté completamente cargado antes de ejecutar el código
-    const lever = document.getElementById('lever');
+    const palanca = document.getElementById('palanca');
     //Obtiene el elemento de la palanca por su ID
-    lever.addEventListener('mousedown', () => {
+    palanca.addEventListener('mousedown', () => {
         //Agrega un evento al hacer clic y mantener presionada la palanca
-        lever.classList.add('active');
+        palanca.classList.add('active');
         //Añade la clase 'active' para simular el movimiento de la palanca
         setTimeout(spin, 300);
     });
     document.addEventListener('mouseup', () => {
 
-        lever.classList.remove('active');
+        palanca.classList.remove('active');
         //Quita la clase 'active' para detener la simulación de la palanca
     });
-    initializeReels();
+    initializeCarrils();
 });
 
 const symbols = ['🍒', '🍋', '🍉', '🍇', '🍓', '⭐'];
-let totalMoney = 100;
+let dinerototal = 100;
 //Damos el valor del dinero, en este caso 100
 
-function initializeReels() {
+function initializeCarrils() {
     //Función para inicializar los carriles
     for (let i = 1; i <= 3; i++) {
         //Itera sobre los tres carriles
-        const reel = document.getElementById(`reel${i}`);
+        const carril = document.getElementById(`carril${i}`);
         //Obtiene cada carril por su ID
-        const symbolsContainer = document.createElement('div');
+        const symbolsBloque = document.createElement('div');
         //Crea un nuevo contenedor de símbolos
-        symbolsContainer.classList.add('symbols');
+        symbolsBloque.classList.add('symbols');
         //Añade la clase 'symbols' al contenedor
-        symbolsContainer.innerHTML = getSymbolsHTML();
+        symbolsBloque.innerHTML = getSymbolsHTML();
         //Llena el contenedor con los símbolos
-        reel.appendChild(symbolsContainer);
+        carril.appendChild(symbolsBloque);
         //Añade el contenedor de símbolos al carril correspondiente
     }
 }
@@ -52,74 +52,74 @@ function getSymbolsHTML() {
 
 function spin() {
     //Función para girar los carriles
-    const betAmount = parseInt(document.getElementById('betAmount').value);
+    const apuesta = parseInt(document.getElementById('apuesta').value);
     //Obtiene el valor de la apuesta y lo convierte a número entero
-    if (isNaN(betAmount) || betAmount <= 0 || betAmount > totalMoney) {
+    if (isNaN(apuesta) || apuesta <= 0 || apuesta > dinerototal) {
         //Verifica si la apuesta es inválida, no dejara girar los carriles si es invalida
-        document.getElementById('result').textContent = 'Apuesta inválida';
+        document.getElementById('resultado').textContent = 'Apuesta inválida';
         return;
     }
 
     //Actualizaciones necesarias si se pierde o se gana al dinero
-    totalMoney -= betAmount;
-    document.getElementById('totalMoney').textContent = totalMoney;
+    dinerototal -= apuesta;
+    document.getElementById('dinerototal').textContent = dinerototal;
 
 
-    const results = [];
+    const resultados = [];
     const spinDurations = [1000, 1500, 2000];
 
     for (let i = 1; i <= 3; i++) {
         //Itera sobre los tres carriles
-        const reel = document.getElementById(`reel${i}`).querySelector('.symbols');
+        const carril = document.getElementById(`carril${i}`).querySelector('.symbols');
         const randomDuration = spinDurations[Math.floor(Math.random() * spinDurations.length)];
         // Selecciona una duración aleatoria para el giro
         const randomPosition = Math.floor(Math.random() * symbols.length) + symbols.length;
 
-        results.push(symbols[randomPosition % symbols.length]);
+        resultados.push(symbols[randomPosition % symbols.length]);
 
-        animateReel(reel, randomPosition * 180, randomDuration);
+        animateCarril(carril, randomPosition * 180, randomDuration);
         //Anima el giro del carril
     }
 
     setTimeout(() => {
-        checkResult(results, betAmount);
+        checkResultado(resultados, apuesta);
     }, Math.max(...spinDurations) + 100);
 }
 
-function animateReel(reel, position, duration) {
+function animateCarril(carril, position, duration) {
     //Esta funcion es la que dara la animacion a los giros de los carriles
-    reel.style.transition = `transform ${duration}ms ease-out`;
-    reel.style.transform = `translateY(-${position}px)`;
+    carril.style.transition = `transform ${duration}ms ease-out`;
+    carril.style.transform = `translateY(-${position}px)`;
 
     setTimeout(() => {
-        reel.style.transition = 'none';
+        carril.style.transition = 'none';
 
-        reel.style.transform = `translateY(-${position % (symbols.length * 180)}px)`;
+        carril.style.transform = `translateY(-${position % (symbols.length * 180)}px)`;
 
     }, duration);
 
 }
 
-function checkResult(results, betAmount) {
-    //Función para verificar los resultados y calcular las ganancias
+function checkResultado(resultados, apuesta) {
+    //Función para verificar los resultadoados y calcular las ganancias
     let winnings = 0;
 
-    if (results[0] === results[1] && results[1] === results[2]) {
+    if (resultados[0] === resultados[1] && resultados[1] === resultados[2]) {
     
-        winnings = betAmount * 5;
-    } else if (results[0] === results[1] || results[1] === results[2]) {
+        winnings = apuesta * 5;
+    } else if (resultados[0] === resultados[1] || resultados[1] === resultados[2]) {
 
-        winnings = betAmount * 2;
+        winnings = apuesta * 2;
     }
 
-    totalMoney += winnings;
+    dinerototal += winnings;
 
-    document.getElementById('totalMoney').textContent = totalMoney;
+    document.getElementById('dinerototal').textContent = dinerototal;
     //Actualiza el dinero total mostrado en la interfaz
 
     if (winnings > 0) {
-        document.getElementById('result').textContent = `¡Ganaste ${winnings}€!`;
+        document.getElementById('resultado').textContent = `¡Has ganado ${winnings}€!`;
     } else {
-        document.getElementById('result').textContent = 'No ganaste nada. Inténtalo de nuevo.';
+        document.getElementById('resultado').textContent = 'No has ganado nada. Inténtalo de nuevo.';
     }
 }
